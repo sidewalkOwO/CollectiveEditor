@@ -5,11 +5,22 @@ function start(){
   img=document.createElement("img");
   img.src="https://sidewalkowo.github.io/CollectiveEditor/winter%20blood%20bear%20flip.png";
   document.body.appendChild(img);
+  
+  script=document.createElement("script");
+	script.src="https://sidewalkowo.github.io/CollectiveEditor/js/new.js";
+	
+	script.onload = loaded;
+	document.body.appendChild(script);
+}
+  
+function loaded(){
+	label_load.textContent = window["abc123"];
 }
 </script>
 <body onload="start()">
 
 <h1>Collective Editor</h1>
+<label id="label_load"></label>
 
 </body>
 
